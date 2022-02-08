@@ -11,12 +11,12 @@
 
     + Download and unzip the source repository for this guide, or clone it using Git:   
     ```
-    $ git clone https://gitlab.com/lippia/products/samples/lippia-api-sample-project.git
+    $ git clone https://github.com/martinchogimenez/lippia_api_project.git
     ```
 
     + Go to root directory:   
     ```
-    $ cd lippia-api-sample-project
+    $ cd lippia_api_project
     ```   
 
   + ### Second Step
