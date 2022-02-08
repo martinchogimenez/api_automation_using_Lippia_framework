@@ -5,7 +5,7 @@
     "Content-Type": "application/json"
   },
   "body": {
-   "start": "2018-06-12T14:00:37Z",
+    "start": "2018-06-12T14:00:37Z",
     "billable": "true",
     "description": "Writing documentation updated",
     "projectId": "61780c853d249a5ebc6dce67",
@@ -14,4 +14,3 @@
   },
   "endpoint": "/workspaces/{{id_workspace}}/time-entries"
 }
-

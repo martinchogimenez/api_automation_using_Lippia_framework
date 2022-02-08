@@ -11,7 +11,6 @@ import services.BaseService;
 
 public class NCommonSteps extends PageSteps {
 
-
     @And("expected response is obtained.")
     public void expectedResponseIsObtained() {
         HourValidator.TimeValidator();
@@ -34,9 +33,6 @@ public class NCommonSteps extends PageSteps {
     public void unNombreDeProyectoName(String name) {
         BaseService.NAME.set(name);
     }
-
-
-
 
     @Then("Valido que haya cambiado el valor de la propiedad billable")
     public void validoQueHayaCambiadoElValorDeLaPropiedadBillable() {

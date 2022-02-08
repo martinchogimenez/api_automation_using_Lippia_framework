@@ -33,10 +33,6 @@ public class Hour {
     @JsonProperty("taskId")
     private String taskId;
 
-
-
-
-
     public String getId() {
         return id;
     }
@@ -81,9 +77,13 @@ public class Hour {
         return userGroupIds;
     }
 
-    public void setUserGroupIds(List<String> userGroupIds) {this.userGroupIds = userGroupIds;}
+    public void setUserGroupIds(List<String> userGroupIds) {
+        this.userGroupIds = userGroupIds;
+    }
 
-    public String getEstimate() {return estimate;}
+    public String getEstimate() {
+        return estimate;
+    }
 
     public void setEstimate(String estimate) {
         this.estimate = estimate;
@@ -109,13 +109,21 @@ public class Hour {
         return billable;
     }
 
-    public void setBillable(Boolean billable) {this.billable = billable;}
+    public void setBillable(Boolean billable) {
+        this.billable = billable;
+    }
 
-    public String getHourlyRate() {return hourlyRate;}
+    public String getHourlyRate() {
+        return hourlyRate;
+    }
 
-    public void setHourlyRate(String hourlyRate) {this.hourlyRate = hourlyRate;}
+    public void setHourlyRate(String hourlyRate) {
+        this.hourlyRate = hourlyRate;
+    }
 
-    public String getCostRate() {return costRate;}
+    public String getCostRate() {
+        return costRate;
+    }
 
     public void setCostRate(String costRate) {
         this.costRate = costRate;

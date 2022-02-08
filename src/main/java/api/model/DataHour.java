@@ -2,7 +2,6 @@ package api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-
 public class DataHour {
 
     @JsonProperty("data")
@@ -15,6 +14,5 @@ public class DataHour {
     public void setData(Hour data) {
         this.data = data;
     }
-
 
 }
