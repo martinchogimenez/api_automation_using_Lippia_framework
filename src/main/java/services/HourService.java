@@ -19,7 +19,6 @@ public class HourService extends BaseService {
         params.put("id_workspace", ID_WORKSPACE.get());
         params.put("id_project", ID_PROJECT.get());
         params.put("id_user", ID_USER.get());
-
         return params;
     }
 }

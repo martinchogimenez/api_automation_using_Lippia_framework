@@ -19,7 +19,6 @@ public class PutService extends BaseService {
         params.put("id_workspace", ID_WORKSPACE.get());
         params.put("id_time_entry", ID_TIME_ENTRY.get());
         params.put("name", NAME.get());
-
         return params;
     }
 }

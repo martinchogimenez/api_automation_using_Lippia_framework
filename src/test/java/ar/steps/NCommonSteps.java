@@ -1,6 +1,6 @@
 package ar.steps;
 
-import ar.validator.HourValidator;
+import ar.validator.GetValidator;
 import ar.validator.PostHValidator;
 import ar.validator.PutHValidator;
 import com.crowdar.core.PageSteps;
@@ -13,7 +13,7 @@ public class NCommonSteps extends PageSteps {
 
     @And("expected response is obtained.")
     public void expectedResponseIsObtained() {
-        HourValidator.TimeValidator();
+        GetValidator.TimeValidator();
 
     }
 

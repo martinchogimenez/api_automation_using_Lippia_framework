@@ -4,7 +4,7 @@ import api.model.Hour;
 import com.crowdar.api.rest.APIManager;
 import org.testng.Assert;
 
-public class HourValidator {
+public class GetValidator {
 
     public static void TimeValidator() {
 
