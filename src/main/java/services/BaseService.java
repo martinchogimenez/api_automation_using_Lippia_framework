@@ -1,7 +1,6 @@
 package services;
 
 import com.crowdar.api.rest.MethodsService;
-import com.google.gson.JsonArray;
 
 public class BaseService extends MethodsService {
 

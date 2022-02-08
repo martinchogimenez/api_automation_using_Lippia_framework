@@ -2,9 +2,6 @@ package api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 
 public class DataHour {
 
