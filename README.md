@@ -65,3 +65,61 @@ Folder's description:
 │          
 │  
 ```
+The test cases are executed using **TestNG** class. This class is the main entry point for running tests in the TestNG framework. By creating their own TestNG object and invoke it on a testng.xml.
+
+|**Attribute** | **Description** | 
+|--------------|-----------------| 
+|name   | The name of this suite. It is a **mandatory** attribute. |  
+|verbose   | Whether TestNG should run different threads to run this suite. |  
+|parallel   | Whether TestNG should run different threads to run this suite. |
+|thread-count   | The number of threads to use, if parallel mode is enabled (ignored other-wise). |  
+|annotations   | The type of annotations you are using in your tests. |  
+|time-out   | The default timeout that will be used on all the test methods found in this test. |  
+
+### testngSecuencial.xml  
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Test Suite" verbose="10" parallel="tests" thread-count="1" configfailurepolicy="continue">
+    <test name="TestNg Secuencial runner Tests" annotations="JDK" preserve-order="true">
+        <classes>
+            <class name="com.crowdar.bdd.cukes.TestNGSecuencialRunner"/>
+        </classes>
+    </test>
+</suite>
+
+```
+
+### testngParallel.xml  
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Test Suite" verbose="1" parallel="methods" data-provider-thread-count="1" thread-count="1" configfailurepolicy="continue">
+    <test name="TestNg parellel runner Tests" annotations="JDK" preserve-order="true">
+        <classes>
+            <class name="com.crowdar.bdd.cukes.TestNGParallelRunner"/>
+        </classes>
+    </test>
+</suite>
+```
+### How to select Sequential or Parallel Runner:
+ 
+**Sequential Runner:**  
+    
+- In the pom.xml file, it looks for the POM in the current directory and assign the value of "testngSecuencial.xml".  
+    
+- This would be as follows:
+```  
+        <runner>testngSecuencial.xml</runner>
+```         
+
+**Parallel Runner:**  
+    
+- In the pom.xml file, it looks for the POM in the current directory and assign the value of "testingParalel.xml"  
+    
+- This would be as follows:  
+```
+        <runner>testngParallel.xml</runner>
+```        
