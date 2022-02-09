@@ -2,7 +2,7 @@
 
 # Purpose
 The following project has the purpose of demonstrate and let test automation developers to test API requests by using Lippia Automation Framework based on Rest Client library. 
-This project includes the required components as binaries and configuration files to simply download and run a set of tests in your local computer.
+This project includes the required components and configuration files to simply download and run a set of tests in your local computer.
 
 ## System Requirements: 
 + JDK: https://docs.oracle.com/en/java/javase/index.html 
