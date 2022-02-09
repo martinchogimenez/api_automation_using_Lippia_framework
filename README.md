@@ -40,8 +40,7 @@ Folder's description:
 |test\resources\response\\\*.json|Folder with all the **json files** containing **Response** data if necessary |
 |main\resources|Folder with all configuration needed to run Lippia |
 
-
-
+The **steps** are defined to execute the *Test Scenarios* defined in Gherkin language.
 
 ## Runners
 ***
