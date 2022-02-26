@@ -12,8 +12,8 @@ Feature: Api example
     And expected response is obtained.
 
     Examples:
-      | jsonName    | statusCode | operation | entity   |
-      | getHours    | 200        | GET       | HOUR     |
+      | jsonName    | statusCode | operation | entity      |
+      | getHours    | 200        | GET       | GETHOUR     |
 
 
   @Success

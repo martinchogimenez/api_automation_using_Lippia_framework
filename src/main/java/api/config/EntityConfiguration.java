@@ -1,16 +1,16 @@
 package api.config;
 
 import services.DelService;
-import services.HourService;
+import services.GetService;
 import services.PostService;
 import services.PutService;
 
 public enum EntityConfiguration {
 
 
-    HOUR {
+    GETHOUR {
         @Override
-        public Class<?> getEntityService() { return HourService.class; }
+        public Class<?> getEntityService() { return GetService.class; }
     },
     POSTHOUR {
         @Override

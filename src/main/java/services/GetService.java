@@ -1,12 +1,12 @@
 package services;
 
+import api.model.DataHour;
 import api.model.Hour;
 import com.crowdar.api.rest.Response;
-
 import java.util.HashMap;
 import java.util.Map;
 
-public class HourService extends BaseService {
+public class GetService extends BaseService {
 
     public static Response get(String jsonName) {
         return get(jsonName, Hour[].class, setParams());
