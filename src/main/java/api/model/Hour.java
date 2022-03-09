@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
+/*
+Here I model the response
+*/
+
 public class Hour {
 
     @JsonProperty("id")

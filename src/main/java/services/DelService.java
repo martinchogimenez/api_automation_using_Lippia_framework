@@ -5,6 +5,10 @@ import com.crowdar.api.rest.Response;
 import java.util.HashMap;
 import java.util.Map;
 
+/* 
+Delete Service class
+*/
+
 public class DelService extends BaseService {
 
     public static Response delete(String jsonName) {

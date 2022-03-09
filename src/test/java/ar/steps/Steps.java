@@ -11,7 +11,14 @@ import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.*;
 import com.google.api.client.repackaged.com.google.common.base.Splitter;
 import cucumber.api.java.en.When;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
+
+
+
 import org.apache.commons.lang.StringUtils;
+import org.testng.Assert;
 import services.BaseService;
 
 import java.lang.reflect.InvocationTargetException;
@@ -41,12 +48,7 @@ public class Steps extends PageSteps {
         return parameters;
     }
 
-    @And("guardo id del time entry")
-    public void guardoIdDelTimeEntry() {
-        Hour response = (Hour) APIManager.getLastResponse().getResponse();
-        String x = response.getId();
-        BaseService.ID_TIME_ENTRY.set(x);
-    }
+
 
     @And("expected response is obtained.")
     public void expectedResponseIsObtained() {
@@ -54,41 +56,62 @@ public class Steps extends PageSteps {
 
     }
 
-    @Given("Mi cuenta creada en clockify y mi X-Api-Key generada")
-    public void miCuentaCreadaEnClockifyYMiXApiKeyGenerada() {
 
+
+
+    @Given("My clockify created account and my generated X-Api-Key")
+    public void myClockifyCreatedAccountAndMyGeneratedXApiKey() {
         BaseService.API_KEY.set("MmNiMjU0NWYtOTAwZi00NGRjLTlmNTUtODc5MTM5ZDRlZGIw");
         BaseService.BASE_URL.set("https://api.clockify.me/api/v1");
     }
 
-    @And("un id workspace valido")
-    public void unIdWorkspaceValido() {
+    @And("a valid workspace id")
+    public void aValidWorkspaceId() {
         BaseService.ID_WORKSPACE.set("617475360be7933405e795fb");
     }
 
-    @And("^un nombre de proyecto (.*)$")
-    public void unNombreDeProyectoName(String name) {
-        BaseService.NAME.set(name);
-    }
-
-    @Then("Valido que haya cambiado el valor de la propiedad billable")
-    public void validoQueHayaCambiadoElValorDeLaPropiedadBillable() {
-        PutHValidator.validate();
-    }
-
-    @Then("Valido los datos obtenidos sean correctos.")
-    public void validoLosDatosObtenidosSeanCorrectos() {
-        PostHValidator.validate();
-    }
-
-    @And("un id project valido")
-    public void unIdProjectValido() {
+    @And("a valid project id")
+    public void aValidProjectId() {
         BaseService.ID_PROJECT.set("61780c853d249a5ebc6dce67");
+        
     }
 
-    @And("un id de usuario valido")
-    public void unIdDeUsuarioValido() {
+    @And("a valid user id")
+    public void aValidUserId() {
         BaseService.ID_USER.set("616f3f8c99d16c30b318e495");
     }
 
+
+
+
+
+    @Then("I validate that the obtained data is correct")
+    public void iValidateThatTheObtainedDataIsCorrect() {
+        PostHValidator.validate();
+    }
+
+    @And("I store the time entry id")
+    public void iStoreTheTimeEntryId() {
+        Hour response = (Hour) APIManager.getLastResponse().getResponse();
+        String x = response.getId();
+        BaseService.ID_TIME_ENTRY.set(x);
+    }
+
+
+
+    @Then("I validate billable property status has changed")
+    public void iValidateBillablePropertyStatusHasChanged() {
+        PutHValidator.validate();
+    }
+
+    @And("a project name {string}")
+    public void aProjectNameName(String name) {
+        BaseService.NAME.set(name);
+    }
+
+    @And("I obtain the status code {string}")
+    public void iObtainTheStatusCodeStatus(String expStatusCode) {
+        int actualStatusCode = APIManager.getLastResponse().getStatusCode();
+        Assert.assertEquals(Integer.parseInt(expStatusCode), actualStatusCode, "The status code are not equals");
+    }
 }

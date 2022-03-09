@@ -6,6 +6,10 @@ import com.crowdar.api.rest.Response;
 import java.util.HashMap;
 import java.util.Map;
 
+/* 
+Put Service class
+*/
+
 public class PutService extends BaseService {
 
     public static Response put(String jsonName) {

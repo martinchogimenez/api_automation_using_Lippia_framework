@@ -1,10 +1,12 @@
 package services;
-
-import api.model.DataHour;
 import api.model.Hour;
 import com.crowdar.api.rest.Response;
 import java.util.HashMap;
 import java.util.Map;
+
+/* 
+Get Service class
+*/
 
 public class GetService extends BaseService {
 

@@ -7,6 +7,10 @@ import services.PutService;
 
 public enum EntityConfiguration {
 
+/*
+Here I call the corresponding service according to the 
+mentioned entity 
+*/
 
     GETHOUR {
         @Override

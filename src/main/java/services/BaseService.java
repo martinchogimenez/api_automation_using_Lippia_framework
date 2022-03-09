@@ -2,6 +2,10 @@ package services;
 
 import com.crowdar.api.rest.MethodsService;
 
+/*
+In this service we asociate some variables data to a thread with Threadlocal class
+*/
+
 public class BaseService extends MethodsService {
 
     public static final ThreadLocal<String> API_KEY = new ThreadLocal<String>();
