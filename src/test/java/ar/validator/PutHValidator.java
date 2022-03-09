@@ -3,6 +3,9 @@ package ar.validator;
 import api.model.Hour;
 import com.crowdar.api.rest.APIManager;
 import org.testng.Assert;
+/*
+In this method we validate that the billable value is true
+*/
 
 public class PutHValidator {
 
