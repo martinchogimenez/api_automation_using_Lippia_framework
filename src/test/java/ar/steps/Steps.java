@@ -47,13 +47,10 @@ public class Steps extends PageSteps {
         return parameters;
     }
 
-
     @And("expected response is obtained.")
     public void expectedResponseIsObtained() {
         GetValidator.TimeValidator();
-
     }
-
 
     @Given("My clockify created account and my generated X-Api-Key")
     public void myClockifyCreatedAccountAndMyGeneratedXApiKey() {
@@ -69,14 +66,12 @@ public class Steps extends PageSteps {
     @And("a valid project id")
     public void aValidProjectId() {
         BaseService.ID_PROJECT.set("61780c853d249a5ebc6dce67");
-
     }
 
     @And("a valid user id")
     public void aValidUserId() {
         BaseService.ID_USER.set("616f3f8c99d16c30b318e495");
     }
-
 
     @Then("I validate that the obtained data is correct")
     public void iValidateThatTheObtainedDataIsCorrect() {
