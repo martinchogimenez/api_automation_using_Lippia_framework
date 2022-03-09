@@ -1,3 +1,7 @@
+/*
+In this Json file we have the data that we send to the API to delete an entry
+*/
+
 {
   "url": "{{base_url}}",
   "headers": {
