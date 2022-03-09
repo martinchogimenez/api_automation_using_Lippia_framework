@@ -8,11 +8,11 @@ Feature: Api example
     And a valid project id
     And a valid user id
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
-    Then status code <statusCode> is obtained
+    Then I obtain the status code '<status>'
     And expected response is obtained.
     @Project
     Examples:
-      | jsonName    | statusCode | operation | entity      |
+      | jsonName    | status     | operation | entity      |
       | getHours    | 200        | GET       | GETHOUR     |
 
 
@@ -27,8 +27,8 @@ Feature: Api example
     And I store the time entry id
     @Project
     Examples:
-      | operation | entity      | name      | jsonName    | status |
-      | POST      | POSTHOUR    | Probandito| postHours   | 201    |
+      | jsonName    | status     | operation | entity      | name           |
+      | postHours   | 201        | POST      | POSTHOUR    | Probandito     |
 
 
   @Success
@@ -41,8 +41,9 @@ Feature: Api example
     Then I validate billable property status has changed
     @Project
     Examples:
-      | operation | entity     | name      | jsonName    | status |
-      | PUT       | PUTHOUR    | Probandito| putHours    | 200    |
+      | jsonName    | status     | operation | entity      | name           |
+      | putHours    | 200        | PUT       | PUTHOUR     | Probandito     |
+
 
   @Success
   Scenario Outline: Delete a time-entry in Workspace with a successful result
@@ -53,7 +54,9 @@ Feature: Api example
     And I obtain the status code '<status>'
     @Project
     Examples:
-      | operation    | entity     | name      | jsonName    | status |
-      | DELETE       | DELHOUR    | Probandito| delHours    | 204    |
+      | jsonName    | status     | operation | entity      | name           |
+      | delHours    | 204        |  DELETE   | DELHOUR     | Probandito     |
+
+
 
 
